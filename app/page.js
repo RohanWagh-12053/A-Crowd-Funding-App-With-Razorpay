@@ -1,103 +1,102 @@
 import Image from "next/image";
+import Footer from "./components/Footer";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <div className="mainPage   h-screen  w-full  flex flex-col items-center ">
+    <div className="min-h-fit w-full bg-black">
+         
+      <div className="section1 relative z-20  flex flex-col justify-center gap-4 items-center w-full h-[60vh]  text-white ">
+        <div className="homeTitle w-full text-5xl font-bold flex items-center justify-center gap-4">
+        <span className="animate-fadeIn">Get Me a Chai</span>
+          <span>
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              className="animate-fadeInReverse"
+              src="/appLogo.gif" unoptimized
+              width={60}
+              height={60}
+              alt="no"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </span>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <p className="homeDescription text-[1.1rem]">
+          A crowdfunding platform for creators. Get funded by your fans and
+          followers. Start now!{" "}
+        </p>
+        <div className="buttons flex">
+        
+        <Link href={"/login"}>
+          <button className="relative shadow-2xl shadow-teal-300  inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-teal-300 to-lime-300 group-hover:from-teal-300 group-hover:to-lime-300 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-lime-800">
+            <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-transparent group-hover:dark:bg-transparent">
+             Start Here
+            </span>
+          </button>
+          </Link>
+          <Link href={"/about"}>
+          <button className="relative shadow-2xl shadow-teal-300  inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-teal-300 to-lime-300 group-hover:from-teal-300 group-hover:to-lime-300 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-lime-800">
+            <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-transparent group-hover:dark:bg-transparent">
+              Read More..
+            </span>
+          </button>
+          </Link>
+           
+        </div>
+        <div className="line my-4 relative z-20 w-[90vw] h-[1px] bg-gray-300 opacity-50 text-white"></div>
+      </div>
+      
+      <div className="section2 relative z-20 py-8 flex flex-col items-center w-full">
+      <h2 className="text-2xl text-white font-semibold">Your Fans Can buy You a Chai</h2>
+          
+      <div className="text-white flex justify-around w-full">
+      <div className="item ">
+            <Image className="w-[10rem]" src="/man.gif" unoptimized width={2} height={2} alt="" />
+            <h2 className="font-semibold text-xl">Fund Yourself</h2>
+            <p>Your Fans are available to Help You!</p>
+            
+
+          </div>
+          <div className="item ">
+            <Image className="w-[10rem]" src="/coin.gif" unoptimized  width={2} height={2} alt="" />
+            <h2 className="font-semibold text-xl">Fund Yourself</h2>
+            <p>Your Fans are available to Help You!</p>
+          </div>
+          <div className="item ">
+            <Image className="w-[10rem]" src="/group.gif" unoptimized  width={2} height={2}  alt="" />
+            <h2 className="font-semibold text-xl">Fund Yourself</h2>
+            <p>Your Fans are available to Help You!</p>
+          </div>
+      </div>
+      <div className="line my-4 relative z-20 w-[90vw] h-[1px] bg-gray-300 opacity-50 text-white"></div>
+
+    </div>
+
+      <div className="section2 relative z-20 py-8 flex flex-col items-center w-full">
+      <h2 className="text-2xl text-white font-semibold">Your Fans Can buy You a Chai</h2>
+          
+      <div className="text-white flex justify-around w-full">
+      <div className="item ">
+            <Image className="w-[10rem]" src="/man.gif" unoptimized width={2} height={2} alt="" />
+            <h2 className="font-semibold text-xl">Fund Yourself</h2>
+            <p>Your Fans are available to Help You!</p>
+            
+
+          </div>
+          <div className="item ">
+            <Image className="w-[10rem]" src="/coin.gif" unoptimized  width={2} height={2} alt="" />
+            <h2 className="font-semibold text-xl">Fund Yourself</h2>
+            <p>Your Fans are available to Help You!</p>
+          </div>
+          <div className="item ">
+            <Image className="w-[10rem]" src="/group.gif" unoptimized  width={2} height={2}  alt="" />
+            <h2 className="font-semibold text-xl">Fund Yourself</h2>
+            <p>Your Fans are available to Help You!</p>
+          </div>
+      </div>
+    </div>
+    <Footer />
+    </div>
+
     </div>
   );
 }
